@@ -2,8 +2,7 @@ const mongoose = require("mongoose");
 
 mongoose.connect(
   "mongodb://irwantowibowojs:irwantowibowojs@cluster0-shard-00-00.wt5s5.mongodb.net:27017,cluster0-shard-00-01.wt5s5.mongodb.net:27017,cluster0-shard-00-02.wt5s5.mongodb.net:27017/basicpos?ssl=true&replicaSet=atlas-rvam0u-shard-0&authSource=admin&retryWrites=true&w=majority",
-  { useNewUrlParser: true },
-  { useUnifiedTopology: true }
+  { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }
 );
 
 mongoose.connection.on("connected", function () {
